@@ -1,0 +1,125 @@
+ /* >>>>>>>>> CSS Rest <<<<<<<< */
+                 
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+/* html,body{
+    width: 100%;
+    height: 100%;
+} */
+
+html{
+    font-size: 62.5%;
+    overflow: hidden;
+}
+body{
+  overflow: hidden;
+}
+
+ /* >>>>>>>>> Remove List Style <<<<<<<< */
+
+ul, ol {
+  list-style: none;
+}
+
+/* Remove default hyperlink styles */
+
+a {
+  text-decoration: none;
+color: inherit;
+}
+
+/* Add a default cursor for clickable elements */
+
+a, button, input {
+  cursor: pointer;
+}
+
+ /* >>>>>>>>> Flex box <<<<<<<< */
+.flex{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+ /* >>>>>>>>> Header Section <<<<<<<< */
+
+header{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color:	#ebebeb;
+  padding: 1.12rem 4rem;
+  height: 70px;
+  
+}
+.logo{
+  font-size: 3rem;
+  font-weight: 800;
+  color: black;
+}
+.logo span{
+  color: #ff2d2d;
+}
+ul{
+  gap: 2.5rem;
+}
+ul li a{
+  font-size: 2rem;
+  font-weight: 600;
+  color: black;
+  padding-bottom: 1.7rem;
+  transition: 0.8s ease;
+}
+ul li a:hover{
+  border-bottom: 5px solid #ff2d2d;
+  color: #ff2d2d;
+}
+.mobile-nav{
+  display: none;
+}
+.mobile-nav img{
+  width: 40px;
+  opacity: 999;
+  cursor: pointer;
+}
+
+@media (max-width: 900px) {
+  ul{
+    position: absolute;
+    top: 70px;
+    left: 0;
+    background-color: #585858;
+    width: 100%;
+    height: 100vh;
+    flex-direction: column;
+    transform: translateX(100%);
+    transition: 0.5s all linear;
+    opacity: 0;    
+    visibility: hidden;
+    pointer-events: none;
+  }
+  ul li{
+    margin: 15px 0px;
+  }
+ ul li a{
+    color: white;
+  }
+  .mobile-nav{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .active{
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transform: translateX(0);
+  }
+  
+}
